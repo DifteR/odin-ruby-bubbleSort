@@ -1,17 +1,18 @@
 def bubbleSort(arrayOfNumbers)
     zeroChangesMade = false
     temp = 0
-    unless zeroChangesMade
+    while !zeroChangesMade
         zeroChangesMade = true
         i = 0
         while i < arrayOfNumbers.length
-            if arrayOfNumbers[i] > arrayOfNumbers[i+1]
+            if arrayOfNumbers[i+1] && arrayOfNumbers[i] > arrayOfNumbers[i+1]
                 temp = arrayOfNumbers[i]
                 arrayOfNumbers[i] = arrayOfNumbers[i+1]
                 arrayOfNumbers[i+1] = temp
                 zeroChangesMade = false
-                p "here"
+                p "here #{i}"
             end
+        i +=1 
         end
     end
 return arrayOfNumbers
